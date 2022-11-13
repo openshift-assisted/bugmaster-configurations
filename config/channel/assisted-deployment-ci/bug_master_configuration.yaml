@@ -1,0 +1,127 @@
+actions:
+  - description: "OCP CI Cluster pool claim timeout"
+    emoji: ignore
+    text: "Timed-out while waiting to get a cluster from the cluster pool, can be ignored"
+    contains: "failed to wait for the created cluster claim to become ready: timed out waiting for the condition"
+    file_path: "build-log.txt"
+
+  - description: "Ignore old OCP versions"
+    emoji: ignore
+    text: "This is testing Assisted support for a very old OCP version, don't waste too much time investigating this. Look only for superficial issues. Especially if the job is only flaky and not completely broken"
+    job_name: periodic-ci-openshift-release-master-nightly-4.6-e2e-metal-assisted
+
+  - description: "Setup Packet server failure"
+    emoji: equinix
+    text: ""
+    contains: "packet-setup failed"
+    file_path: "build-log.txt"
+    ignore_others: true
+
+  - description: "All mirrors were tried"
+    text: "```Errors during downloading metadata for repository 'appstream':\nAll mirrors were tried```"
+    contains: "All mirrors were tried"
+    file_path: "build-log.txt"
+
+  - description: "Timeout of 360 seconds expired waiting for Waiting for Ips"
+    text: "```Timeout of 360 seconds expired waiting for Waiting for Ips```"
+    contains: "Timeout of 360 seconds expired waiting for Waiting for Ips"
+    "file_path": "artifacts/{job_name}/assisted-common-gather/artifacts/reports/*"
+
+  - description: "Timeout of 3600 seconds expired waiting for Nodes to be in of the statuses ['installed']"
+    text: "```waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Nodes to be in of the statuses ['installed']```"
+    contains: "waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Nodes to be in of the statuses ['installed']"
+    "file_path": "artifacts/{job_name}/assisted-common-gather/artifacts/reports/*"
+
+  - description: "Broken disconnected job"
+    job_name: "e2e-ai-operator-ztp-disconnected-periodic"
+    emoji: alert
+    assignees:
+      users:
+        - mkowalsk
+
+  - description: "Repositories snapshot failed"
+    text: "We currently know of two possible issues for that: 1. image-mirroring failed 2. commit just got merged and image-mirroring not yet completed"
+    job_name: periodic-ci-openshift-assisted-assisted-installer-deployment-master-snapshot-repos
+    emoji: joy-division
+
+  - description: "Late binding job has been broken for a very long while"
+    emoji: alert
+    job_name: e2e-metal-assisted-kube-api-late-binding-single-node
+    assignees:
+      users:
+        - otuchfel
+        - agentil
+
+  - description: "e2e-metal-assisted-prod-periodic"
+    emoji: alert
+    job_name: e2e-metal-assisted-prod-periodic
+    assignees:
+      users:
+        - osherdp
+
+  - description: "e2e-metal-assisted-day2-single-node"
+    job_name: e2e-metal-assisted-day2-single-node
+    emoji: ignore
+    text: "https://issues.redhat.com/browse/MGMT-11886 known terraform directory bug"
+
+  - description: "e2e-metal-assisted-day2"
+    emoji: alert
+    job_name: e2e-metal-assisted-day2
+    assignees:
+      users:
+        - derez
+
+  - description: "Process did not finish before 4h0m0s timeout"
+    text: "```Process did not finish before 4h0m0s timeout```"
+    contains: "Process did not finish before 4h0m0s timeout"
+    file_path: "build-log.txt"
+
+  - description: "dev-scripts failed to install the hub"
+    text: "The hub cluster that was supposed to be installed by the dev-scripts steps did not finish installation, this is not an issue with the assisted-installer and should probably be ignored"
+    contains: "baremetalds-devscripts-setup failed after"
+    file_path: "build-log.txt"
+    emoji: baremetal
+
+  - description: "Conformance tests"
+    emoji: conformance-test-failed
+    text: "```Conformance tests failure```"
+    contains: "Failing tests"
+    file_path: "build-log.txt"
+    ignore_others: true
+
+      #
+  - description: "Flaky TPM test"
+    text: "https://issues.redhat.com/browse/MGMT-8707 has been reopened until we make fixed version of swtpm packages get into Rocky Linux repositories"
+    job_name: e2e-metal-assisted-tpmv2
+
+  - description: "UI image pull issue"
+    text: "UI failed to deploy, we have seen a lot of this recently"
+    emoji: broken-image
+    contains: " deploy_ui] Error 1"
+    file_path: "build-log.txt"
+
+  - description: "CRI-O ipv6 issue"
+    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-11633"
+    emoji: crio
+    job_name: periodic-ci-openshift-assisted-test-infra-release-ocm-2.6-e2e-metal-assisted-kube-api-net-suite-periodic
+
+  - description: "Unknown issue"
+    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12410. Need more investigation."
+    job_name: periodic-ci-openshift-assisted-test-infra-master-e2e-metal-assisted-ipv6-periodic
+
+  - description: "vsphere CI jobs failures due to Internal Server Error"
+    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12345\n```Error: error 500 Internal Server Error```"
+    job_name: e2e-vsphere-assisted
+
+  - description: "OLM operators failure"
+    text: "```waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Monitored ['olm'] operators to be in of the statuses ['available', 'failed']```"
+    contains: "waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Monitored"
+    "file_path": "artifacts/{job_name}/assisted-common-gather/artifacts/reports/*"
+
+  - description: "Unknown OLM operator issue"
+    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12401. Need more investigation."
+    job_name: e2e-metal-assisted-odf-periodic
+
+  - description: "Unknown OLM operator issue"
+    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12401. Need more investigation."
+    job_name: e2e-metal-assisted-cnv-periodic
