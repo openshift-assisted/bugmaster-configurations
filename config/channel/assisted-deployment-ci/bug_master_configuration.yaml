@@ -1,3 +1,9 @@
+prow_configurations:
+  owner: openshift
+  repo: release
+  files:
+    - ci-operator/jobs/openshift/assisted-test-infra/openshift-assisted-test-infra-master-periodics.yaml
+
 actions:
   - description: "OCP CI Cluster pool claim timeout"
     emoji: ignore
