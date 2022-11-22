@@ -116,7 +116,7 @@ actions:
     job_name: periodic-ci-openshift-assisted-test-infra-master-e2e-metal-assisted-ipv6-periodic
 
   - description: "vsphere CI jobs failures due to Internal Server Error"
-    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12345\n```Error: error 500 Internal Server Error```"
+    text: "This job is broken due to https://issues.redhat.com/browse/OCPBUGS-2991\n```Error: error 500 Internal Server Error```"
     job_name: e2e-vsphere-assisted
 
   - description: "OLM operators failure"
