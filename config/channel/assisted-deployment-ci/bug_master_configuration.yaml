@@ -131,3 +131,8 @@ actions:
   - description: "Unknown OLM operator issue"
     text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12401. Need more investigation."
     job_name: e2e-metal-assisted-cnv-periodic
+
+  - description: "Unknown issue"
+    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12679. Need more investigation."
+    job_name: e2e-metal-assisted-ipv4v6
+
