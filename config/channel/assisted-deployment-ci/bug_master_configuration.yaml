@@ -95,11 +95,6 @@ actions:
     file_path: "build-log.txt"
     ignore_others: true
 
-      #
-  - description: "Flaky TPM test"
-    text: "https://issues.redhat.com/browse/MGMT-8707 has been reopened until we make fixed version of swtpm packages get into Rocky Linux repositories"
-    job_name: e2e-metal-assisted-tpmv2
-
   - description: "UI image pull issue"
     text: "UI failed to deploy, we have seen a lot of this recently"
     emoji: broken-image
@@ -111,10 +106,6 @@ actions:
     emoji: crio
     job_name: periodic-ci-openshift-assisted-test-infra-release-ocm-2.6-e2e-metal-assisted-kube-api-net-suite-periodic
 
-  - description: "Unknown issue"
-    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12410. Need more investigation."
-    job_name: periodic-ci-openshift-assisted-test-infra-master-e2e-metal-assisted-ipv6-periodic
-
   - description: "vsphere CI jobs failures due to Internal Server Error"
     text: "This job is broken due to https://issues.redhat.com/browse/OCPBUGS-2991"
     job_name: e2e-vsphere-assisted
@@ -124,15 +115,7 @@ actions:
     contains: "waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Monitored"
     "file_path": "artifacts/{job_name}/assisted-common-gather/artifacts/reports/*"
 
-  - description: "Unknown OLM operator issue"
-    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12401. Need more investigation."
-    job_name: e2e-metal-assisted-odf-periodic
-
-  - description: "Unknown OLM operator issue"
-    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12401. Need more investigation."
-    job_name: e2e-metal-assisted-cnv-periodic
-
   - description: "Unknown issue"
-    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12679. Need more investigation."
-    job_name: e2e-metal-assisted-ipv4v6
+    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12944. Need more investigation."
+    job_name: periodic-ci-openshift-assisted-service-release-ocm-2.5-e2e-ai-operator-ztp-capi-periodic
 
