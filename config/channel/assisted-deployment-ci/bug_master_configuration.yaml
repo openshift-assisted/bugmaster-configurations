@@ -4,6 +4,112 @@ prow_configurations:
   files:
     - ci-operator/jobs/openshift/assisted-test-infra/openshift-assisted-test-infra-master-periodics.yaml
 
+assignees:
+  data:
+    - job_name: e2e-vsphere-assisted
+      startswith: true
+      users:
+        - eerez
+
+    - job_name: triage-status-report
+      users:
+        - agentil
+
+    - job_name: subsystem
+      startswith: true
+      users:
+        - edge-support
+
+    - jobs:
+        - e2e-metal-assisted-onprem-periodic
+        - e2e-metal-assisted-periodic
+        - e2e-metal-assisted-4-10-periodic
+        - e2e-metal-assisted-4-12-periodic
+        - e2e-metal-assisted-4-8-periodic
+        - e2e-metal-assisted-4-9-periodic
+      users:
+        - edge-support
+
+    - job_name: e2e-nutanix-assisted
+      startswith: true
+      users:
+        - vrutkovs
+
+    - job_name: e2e-ai-operator-ztp-3masters-periodic
+      users:
+        - vrutkovs
+
+    - job_name: e2e-ai-operator-ztp-converged-periodic
+      users:
+        - ncarboni
+
+    - job_name: e2e-metal-assisted-upgrade-agent-periodic
+      users:
+        - jhernand
+
+    - job_name: e2e-metal-assisted-ipxe-periodic
+      users:
+        - cchun
+
+    - jobs:
+        - e2e-metal-assisted-static-ip-suite-periodic
+        - e2e-metal-assisted-ipv6-periodic
+        - e2e-ai-operator-ztp-periodic
+        - e2e-metal-assisted-kube-api-net-suite-periodic
+
+      users:
+        - nmagnezi
+
+    - jobs:
+        - e2e-metal-assisted-day2-single-node-periodic
+        - e2e-metal-assisted-single-node-periodic
+        - e2e-ai-operator-ztp-ipv4v6-sno-periodic
+        - e2e-ai-operator-ztp-ipv4v6-sno-ocp-411-periodic
+        - e2e-ai-operator-ztp-ipv4v6-sno-ocp-411-periodic
+        - e2e-metal-assisted-none-periodic
+      users:
+        - otuchfel
+
+    - jobs:
+        - e2e-metal-assisted-odf-periodic
+        - e2e-metal-assisted-ocs-periodic
+        - e2e-metal-assisted-lvm-periodic
+        - e2e-metal-assisted-cnv-periodic
+      users:
+        - itsoiref
+
+    - jobs:
+        - e2e-ai-operator-ztp-hypershift-zero-nodes-periodic
+        - e2e-metal-assisted-kube-api-late-binding-single-node-periodic
+      users:
+        - slavie
+
+    - jobs:
+        - e2e-ai-operator-ztp-ipv4v6-3masters-ocp-411-periodic
+        - e2e-ai-operator-ztp-ipv4v6-3masters-periodic
+        - e2e-metal-assisted-ipv4v6-periodic
+      users:
+        - oamizur
+
+    - jobs:
+        - e2e-ai-operator-ztp-disconnected-periodic
+        - e2e-metal-assisted-day2-periodic
+      users:
+        - derez
+
+    - jobs:
+        - e2e-metal-assisted-capi-periodic
+        - e2e-ai-operator-ztp-capi-periodic
+      users:
+        - ercohen
+
+    - jobs:
+        - e2e-ai-operator-ztp-sno-day2-workers-late-binding-periodic
+        - e2e-ai-operator-ztp-sno-day2-workers-periodic
+      users:
+        - pmaidmen
+
+
 actions:
   - description: "OCP CI Cluster pool claim timeout"
     emoji: ignore
@@ -106,10 +212,6 @@ actions:
     emoji: crio
     job_name: periodic-ci-openshift-assisted-test-infra-release-ocm-2.6-e2e-metal-assisted-kube-api-net-suite-periodic
 
-  - description: "vsphere CI jobs failures due to Internal Server Error"
-    text: "This job is broken due to https://issues.redhat.com/browse/OCPBUGS-2991"
-    job_name: e2e-vsphere-assisted
-
   - description: "OLM operators failure"
     text: "```waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Monitored ['olm'] operators to be in of the statuses ['available', 'failed']```"
     contains: "waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Monitored"
@@ -118,4 +220,3 @@ actions:
   - description: "Unknown issue"
     text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12944. Need more investigation."
     job_name: periodic-ci-openshift-assisted-service-release-ocm-2.5-e2e-ai-operator-ztp-capi-periodic
-
