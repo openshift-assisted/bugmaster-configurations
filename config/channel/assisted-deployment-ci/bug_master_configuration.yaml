@@ -191,7 +191,3 @@ actions:
     text: "```waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Monitored ['olm'] operators to be in of the statuses ['available', 'failed']```"
     contains: "waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Monitored"
     "file_path": "artifacts/{job_name}/assisted-common-gather/artifacts/reports/*"
-
-  - description: "Unknown issue"
-    text: "This job is broken due to https://issues.redhat.com/browse/MGMT-12944. Need more investigation."
-    job_name: periodic-ci-openshift-assisted-service-release-ocm-2.5-e2e-ai-operator-ztp-capi-periodic
