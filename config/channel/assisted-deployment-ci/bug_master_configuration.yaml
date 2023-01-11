@@ -144,44 +144,19 @@ actions:
     contains: "waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Nodes to be in of the statuses ['installed']"
     "file_path": "artifacts/{job_name}/assisted-common-gather/artifacts/reports/*"
 
-  - description: "Broken disconnected job"
-    job_name: "e2e-ai-operator-ztp-disconnected-periodic"
-    emoji: alert
-    assignees:
-      users:
-        - mkowalsk
-
   - description: "Repositories snapshot failed"
     text: "We currently know of two possible issues for that:\n 1. image-mirroring failed\n 2. commit just got merged and image-mirroring not yet completed"
     job_name: periodic-ci-openshift-assisted-assisted-installer-deployment-master-snapshot-repos
     emoji: joy-division
 
-  - description: "Late binding job has been broken for a very long while"
-    emoji: alert
-    job_name: e2e-metal-assisted-kube-api-late-binding-single-node
-    assignees:
-      users:
-        - otuchfel
-        - agentil
-
   - description: "e2e-metal-assisted-prod-periodic"
     emoji: alert
     job_name: e2e-metal-assisted-prod-periodic
-    assignees:
-      users:
-        - osherdp
 
   - description: "e2e-metal-assisted-day2-single-node"
     job_name: e2e-metal-assisted-day2-single-node
     emoji: ignore
     text: "https://issues.redhat.com/browse/MGMT-11886 known terraform directory bug"
-
-  - description: "e2e-metal-assisted-day2"
-    emoji: alert
-    job_name: e2e-metal-assisted-day2
-    assignees:
-      users:
-        - derez
 
   - description: "Process did not finish before 4h0m0s timeout"
     text: "```Process did not finish before 4h0m0s timeout```"
