@@ -65,7 +65,6 @@ assignees:
         - e2e-metal-assisted-single-node-periodic
         - e2e-ai-operator-ztp-ipv4v6-sno-periodic
         - e2e-ai-operator-ztp-ipv4v6-sno-ocp-411-periodic
-        - e2e-ai-operator-ztp-ipv4v6-sno-ocp-411-periodic
         - e2e-metal-assisted-none-periodic
       users:
         - otuchfel
