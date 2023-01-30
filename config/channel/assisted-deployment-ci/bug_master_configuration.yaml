@@ -190,3 +190,9 @@ actions:
     text: "```waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Monitored ['olm'] operators to be in of the statuses ['available', 'failed']```"
     contains: "waiting.exceptions.TimeoutExpired: Timeout of 3600 seconds expired waiting for Monitored"
     "file_path": "artifacts/{job_name}/assisted-common-gather/artifacts/reports/*"
+
+  - description: "MGMT-11886"
+    text: "https://issues.redhat.com/browse/MGMT-11886 known issue"
+    contains: "<string>: UnsyncedAgents"
+    file_path: "build-log.txt"
+    job_name: periodic-ci-openshift-assisted-service-master-edge-subsystem-kubeapi-aws-periodic
