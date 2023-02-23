@@ -11,7 +11,9 @@ assignees:
       users:
         - eerez
 
-    - job_name: triage-status-report
+    - jobs:
+        - triage-status-report
+        - e2e-metal-assisted-day2-arm-workers-periodic
       users:
         - agentil
 
