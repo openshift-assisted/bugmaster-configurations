@@ -52,7 +52,9 @@ assignees:
       users:
         - nmagnezi
 
-    - job_name: e2e-ai-operator-ztp-converged-periodic
+    - jobs:
+        - e2e-ai-operator-ztp-converged-periodic
+        - e2e-ai-operator-ztp-remove-node-periodic
       users:
         - ncarboni
 
