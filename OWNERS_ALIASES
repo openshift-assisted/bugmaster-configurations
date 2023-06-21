@@ -1,0 +1,13 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+aliases:
+  code-reviewers:
+    - eliorerz
+    - adriengentil
+    - osherdp
+    - gamli75
+  code-approvers:
+    - eliorerz
+    - adriengentil
+    - osherdp
+    - gamli75
