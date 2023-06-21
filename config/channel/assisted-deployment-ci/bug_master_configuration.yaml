@@ -32,10 +32,21 @@ assignees:
       users:
         - edge-support
 
+    - jobs:
+        - e2e-metal-assisted-metallb-periodic
+        - e2e-metal-assisted-mce-periodic
+      users:
+        - eerez
+
     - job_name: e2e-nutanix-assisted
       startswith: true
       users:
         - eerez
+
+    - job_name: e2e-oci-assisted
+      startswith: true
+      users:
+        - agentil
 
     - job_name: e2e-ai-operator-ztp-3masters-periodic
       users:
