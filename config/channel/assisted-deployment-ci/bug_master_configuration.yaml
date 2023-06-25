@@ -62,7 +62,10 @@ assignees:
       users:
         - jhernand
 
-    - job_name: e2e-metal-assisted-ipxe-periodic
+    - jobs:
+        - e2e-metal-assisted-capi-periodic
+        - e2e-ai-operator-ztp-capi-periodic
+        - e2e-metal-assisted-ipxe-periodic
       users:
         - cchun
 
@@ -105,12 +108,6 @@ assignees:
         - e2e-ai-operator-ztp-hypershift-zero-nodes-periodic
       users:
         - derez
-
-    - jobs:
-        - e2e-metal-assisted-capi-periodic
-        - e2e-ai-operator-ztp-capi-periodic
-      users:
-        - ercohen
 
     - jobs:
         - e2e-ai-operator-ztp-sno-day2-workers-late-binding-periodic
