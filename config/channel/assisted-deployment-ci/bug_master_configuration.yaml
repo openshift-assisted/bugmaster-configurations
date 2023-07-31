@@ -93,7 +93,7 @@ assignees:
         - e2e-metal-assisted-lvm-periodic
         - e2e-metal-assisted-cnv-periodic
       users:
-        - itsoiref
+        - eerez
 
     - jobs:
         - e2e-ai-operator-ztp-ipv4v6-3masters-ocp-411-periodic
