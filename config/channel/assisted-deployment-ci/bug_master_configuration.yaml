@@ -50,7 +50,7 @@ assignees:
 
     - job_name: e2e-ai-operator-ztp-3masters-periodic
       users:
-        - nmagnezi
+        - oamizur
 
     - jobs:
         - e2e-ai-operator-ztp-converged-periodic
@@ -76,7 +76,7 @@ assignees:
         - e2e-metal-assisted-kube-api-net-suite-periodic
 
       users:
-        - nmagnezi
+        - oamizur
 
     - jobs:
         - e2e-metal-assisted-day2-single-node-periodic
