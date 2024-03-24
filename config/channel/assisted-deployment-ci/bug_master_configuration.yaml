@@ -9,7 +9,7 @@ assignees:
     - job_name: e2e-vsphere-assisted
       startswith: true
       users:
-        - dmanor
+        - agentil
 
     - jobs:
         - triage-status-report
@@ -25,10 +25,10 @@ assignees:
     - jobs:
         - e2e-metal-assisted-onprem-periodic
         - e2e-metal-assisted-periodic
-        - e2e-metal-assisted-4-10-periodic
+        - e2e-metal-assisted-4-15-periodic
+        - e2e-metal-assisted-4-14-periodic
+        - e2e-metal-assisted-4-13-periodic
         - e2e-metal-assisted-4-12-periodic
-        - e2e-metal-assisted-4-8-periodic
-        - e2e-metal-assisted-4-9-periodic
       users:
         - edge-support
 
@@ -41,7 +41,7 @@ assignees:
     - job_name: e2e-nutanix-assisted
       startswith: true
       users:
-        - dmanor
+        - eifrach
 
     - job_name: e2e-oci-assisted
       startswith: true
@@ -66,6 +66,7 @@ assignees:
         - e2e-metal-assisted-capi-periodic
         - e2e-ai-operator-ztp-capi-periodic
         - e2e-metal-assisted-ipxe-periodic
+        - e2e-ai-operator-ztp-hypershift-zero-nodes-periodic
       users:
         - cchun
 
@@ -82,7 +83,6 @@ assignees:
         - e2e-metal-assisted-day2-single-node-periodic
         - e2e-metal-assisted-single-node-periodic
         - e2e-ai-operator-ztp-ipv4v6-sno-periodic
-        - e2e-ai-operator-ztp-ipv4v6-sno-ocp-411-periodic
         - e2e-metal-assisted-none-periodic
       users:
         - otuchfel
@@ -96,7 +96,6 @@ assignees:
         - dmanor
 
     - jobs:
-        - e2e-ai-operator-ztp-ipv4v6-3masters-ocp-411-periodic
         - e2e-ai-operator-ztp-ipv4v6-3masters-periodic
         - e2e-metal-assisted-ipv4v6-periodic
       users:
@@ -105,7 +104,6 @@ assignees:
     - jobs:
         - e2e-ai-operator-ztp-disconnected-periodic
         - e2e-metal-assisted-day2-periodic
-        - e2e-ai-operator-ztp-hypershift-zero-nodes-periodic
       users:
         - derez
 
