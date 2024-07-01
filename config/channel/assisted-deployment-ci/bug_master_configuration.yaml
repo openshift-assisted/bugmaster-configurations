@@ -120,6 +120,18 @@ assignees:
 
 
 actions:
+  - description: "Setup Packet server failure"
+    emoji: equinix
+    text: ""
+    step_name: "baremetalds-packet-setup",
+    ignore_others: true
+
+  - description: "Conformance tests"
+    emoji: conformance-test-failed
+    text: "```Conformance tests failure```"
+    step_name: "assisted-baremetal-test"
+    ignore_others: true
+
   - description: "OCP CI Cluster pool claim timeout"
     emoji: ignore
     text: "Timed-out while waiting to get a cluster from the cluster pool, can be ignored"
@@ -130,13 +142,6 @@ actions:
     emoji: ignore
     text: "This is testing Assisted support for a very old OCP version, don't waste too much time investigating this. Look only for superficial issues. Especially if the job is only flaky and not completely broken"
     job_name: periodic-ci-openshift-release-master-nightly-4.6-e2e-metal-assisted
-
-  - description: "Setup Packet server failure"
-    emoji: equinix
-    text: ""
-    contains: "packet-setup failed"
-    file_path: "build-log.txt"
-    ignore_others: true
 
   - description: "All mirrors were tried"
     text: "```Errors during downloading metadata for repository 'appstream':\nAll mirrors were tried```"
@@ -177,13 +182,6 @@ actions:
     contains: "baremetalds-devscripts-setup failed after"
     file_path: "build-log.txt"
     emoji: baremetal
-
-  - description: "Conformance tests"
-    emoji: conformance-test-failed
-    text: "```Conformance tests failure```"
-    contains: "Failing tests"
-    file_path: "build-log.txt"
-    ignore_others: true
 
   - description: "UI image pull issue"
     text: "UI failed to deploy, we have seen a lot of this recently"
