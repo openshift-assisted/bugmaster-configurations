@@ -83,7 +83,6 @@ assignees:
         - e2e-metal-assisted-day2-single-node-periodic
         - e2e-metal-assisted-single-node-periodic
         - e2e-ai-operator-ztp-ipv4v6-sno-periodic
-        - e2e-metal-assisted-none-periodic
       users:
         - otuchfel
 
@@ -113,6 +112,11 @@ assignees:
         - e2e-metal-assisted-kube-api-late-binding-single-node-periodic
       users:
         - pmaidmen
+    
+    - jobs:
+        - e2e-metal-assisted-none-periodic
+      users:
+        - eifrach
 
 
 actions:
