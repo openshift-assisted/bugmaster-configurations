@@ -6,118 +6,15 @@ prow_configurations:
 
 assignees:
   data:
-    - job_name: e2e-vsphere-assisted
+    - job_name: e2e
       startswith: true
       users:
-        - agentil
-
-    - jobs:
-        - triage-status-report
-        - e2e-metal-assisted-day2-arm-workers-periodic
-      users:
-        - agentil
-
+        - danmanor
+    
     - job_name: subsystem
       startswith: true
       users:
-        - edge-support
-
-    - jobs:
-        - e2e-metal-assisted-onprem-periodic
-        - e2e-metal-assisted-periodic
-        - e2e-metal-assisted-4-15-periodic
-        - e2e-metal-assisted-4-14-periodic
-        - e2e-metal-assisted-4-13-periodic
-        - e2e-metal-assisted-4-12-periodic
-      users:
-        - edge-support
-
-    - jobs:
-        - e2e-metal-assisted-metallb-periodic
-        - e2e-metal-assisted-mce-periodic
-      users:
-        - dmanor
-
-    - job_name: e2e-nutanix-assisted
-      startswith: true
-      users:
-        - eifrach
-
-    - job_name: e2e-oci-assisted
-      startswith: true
-      users:
-        - agentil
-
-    - job_name: e2e-ai-operator-ztp-3masters-periodic
-      users:
-        - oamizur
-
-    - jobs:
-        - e2e-ai-operator-ztp-converged-periodic
-        - e2e-ai-operator-ztp-remove-node-periodic
-      users:
-        - ncarboni
-
-    - job_name: e2e-metal-assisted-upgrade-agent-periodic
-      users:
-        - jhernand
-
-    - jobs:
-        - e2e-metal-assisted-capi-periodic
-        - e2e-ai-operator-ztp-capi-periodic
-        - e2e-metal-assisted-ipxe-periodic
-        - e2e-ai-operator-ztp-hypershift-zero-nodes-periodic
-      users:
-        - cchun
-
-    - jobs:
-        - e2e-metal-assisted-static-ip-suite-periodic
-        - e2e-metal-assisted-ipv6-periodic
-        - e2e-ai-operator-ztp-periodic
-        - e2e-metal-assisted-kube-api-net-suite-periodic
-
-      users:
-        - oamizur
-
-    - jobs:
-        - e2e-metal-assisted-day2-single-node-periodic
-        - e2e-metal-assisted-single-node-periodic
-        - e2e-ai-operator-ztp-ipv4v6-sno-periodic
-      users:
-        - otuchfel
-
-    - jobs:
-        - e2e-metal-assisted-odf-periodic
-        - e2e-metal-assisted-ocs-periodic
-        - e2e-metal-assisted-lvm-periodic
-        - e2e-metal-assisted-cnv-periodic
-      users:
-        - dmanor
-
-    - jobs:
-        - e2e-ai-operator-ztp-ipv4v6-3masters-periodic
-        - e2e-metal-assisted-ipv4v6-periodic
-      users:
-        - oamizur
-
-    - jobs:
-        - e2e-ai-operator-ztp-disconnected-periodic
-        - e2e-metal-assisted-day2-periodic
-      users:
-        - derez
-
-    - jobs:
-        - e2e-ai-operator-ztp-sno-day2-workers-late-binding-periodic
-        - e2e-ai-operator-ztp-sno-day2-workers-periodic
-        - e2e-metal-assisted-kube-api-late-binding-single-node-periodic
-      users:
-        - pmaidmen
-    
-    - jobs:
-        - e2e-metal-assisted-none-periodic
-      users:
-        - eifrach
-
+        - danmanor
 
 actions:
   - description: "OCP CI Cluster pool claim timeout"
@@ -132,9 +29,9 @@ actions:
     job_name: periodic-ci-openshift-release-master-nightly-4.6-e2e-metal-assisted
 
   - description: "Setup Packet server failure"
-    emoji: equinix
+    emoji: hybrid-cloud-infrastructure
     text: ""
-    contains: "packet-setup failed"
+    contains: "ofcir-acquire failed"
     file_path: "build-log.txt"
     ignore_others: true
 
